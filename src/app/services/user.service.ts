@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UserService {
-  url = environment.apiUrl
+  url = environment.apiUrl //endpoint
 
   constructor(private htppClient: HttpClient) { }
 
@@ -16,5 +16,17 @@ export class UserService {
       {
         headers: new HttpHeaders().set('Content-Type', 'application/json')
       })
+  }
+
+  forgotPassword(data:any):Observable<any>{
+    return this.htppClient.post(this.url+"/user/forgotPassword/",data)
+  }
+
+  login(data:any):Observable<any>{
+    return this.htppClient.post(this.url+"/user/login/",data)
+  }
+
+  checkToken():Observable<any>{
+    return this.htppClient.get(this.url+"/user/checkToken/")
   }
 }

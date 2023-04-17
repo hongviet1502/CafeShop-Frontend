@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span class="title-center">Login</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="loginForm">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>
+                    Email
+                </mat-label>
+                <input matInput formControlName="email">
+                <mat-error>
+                    {{loginForm.controls['email'].errors | json}}
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>
+                    Password
+                </mat-label>
+                <input matInput formControlName="password">
+                <mat-error>
+                    {{loginForm.controls['password'].errors | json}}
+                </mat-error>
+            </mat-form-field>
+        </div>
+    </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="center">
+    <button mat-raised-button color="primary" type="submit" (click)="handleLoginSubmit()">
+        Login
+    </button>
+    <button mat-raised-button color="primary" mat-dialog-close="">Close</button>
+</mat-dialog-actions>

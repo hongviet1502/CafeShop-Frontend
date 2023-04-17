@@ -6,7 +6,6 @@ import { SnackbarService } from '../services/snackbar.service';
 import { MatDialogRef } from '@angular/material/dialog';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { GlobalConstants } from '../shared/global-constants';
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',

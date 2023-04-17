@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row fxLayout="row">
+    <mat-toolbar-row>
         <span class="title-center">
             Sign Up
         </span>
@@ -9,7 +9,7 @@
 <mat-dialog-content class="mat-typography">
     <form [formGroup]="signupForm">
         <div>
-            <mat-form-field>
+            <mat-form-field appearance="fill">
                 <mat-label>
                     Name
                 </mat-label>
@@ -18,7 +18,7 @@
                     {{signupForm.controls['name'].errors | json}}
                 </mat-error>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field appearance="fill">
                 <mat-label>
                     Email
                 </mat-label>
@@ -27,7 +27,7 @@
                     {{signupForm.controls['email'].errors | json}}
                 </mat-error>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field appearance="fill">
                 <mat-label>
                     Contact number
                 </mat-label>
@@ -36,7 +36,7 @@
                     {{signupForm.controls['contactNumber'].errors | json}}
                 </mat-error>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field appearance="fill">
                 <mat-label>
                     Password
                 </mat-label>
@@ -52,4 +52,5 @@
     <button mat-raised-button color="primary" type="submit" (click)="handleSubmit()">
         Sign Up
     </button>
+    <button mat-raised-button color="primary" mat-dialog-close="">Close</button>
 </mat-dialog-actions>

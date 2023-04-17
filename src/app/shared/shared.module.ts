@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-
 import { AccordionAnchorDirective, AccordionLinkDirective, AccordionDirective } from './accordion';
 
 
@@ -7,7 +6,7 @@ import { AccordionAnchorDirective, AccordionLinkDirective, AccordionDirective } 
   declarations: [
     AccordionAnchorDirective,
     AccordionLinkDirective,
-    AccordionDirective
+    AccordionDirective,
   ],
   exports: [
     AccordionAnchorDirective,
