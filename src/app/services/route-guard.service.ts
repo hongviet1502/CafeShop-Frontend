@@ -12,22 +12,26 @@ export class RouteGuardService {
     public router: Router,
     private snackbarService: SnackbarService) { }
 
-  // canActivate(route:ActivatedRouteSnapshot):boolean{
-  //   let expectedRoleArray = route.data
-  //   expectedRoleArray = expectedRoleArray['expectedRole'];
+  canActivate(route:ActivatedRouteSnapshot):boolean{
+    // let expectedRoleArray = route.data
+    // expectedRoleArray = expectedRoleArray['expectedRole'];
 
-  //   const token:any = localStorage.getItem('token')
-  //   var tokenPayload:any
-  //   try{
-  //     tokenPayload = jwt_decode(token)
-  //   }
-  //   catch(err){
-  //     localStorage.clear()
-  //     this.router.navigate(['/'])
-  //   }
+    // const token:any = localStorage.getItem('token')
+    // var tokenPayload:any
+    // try{
+    //   tokenPayload = jwt_decode(token)
+    // }
+    // catch(err){
+    //   localStorage.clear()
+    //   this.router.navigate(['/'])
+    // }
 
-  //   let checkRole = false
+    let checkRole = true
+
+    return true
     
-  //   for(let i =0;i<expectedRoleArray['length'];i++)
-  // }
+    // for(let i =0;i< ;i++){
+
+    // }
+  }
 }

@@ -19,7 +19,7 @@ export class CategoryService {
     return this.httpClient.post(this.url+"/category/update/",data)
   }
 
-  getCategory(data:any) :Observable<any>{
+  getCategory():Observable<any>{
     return this.httpClient.get(this.url+"/category/get/")
   }
 }

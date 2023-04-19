@@ -9,7 +9,7 @@ export const MaterialRoutes: Routes = [
     {
         path:'category',
         component:ManageCategoryComponent,
-        canActivate:[RouteGuardService],
+        
         data:{
             
         }
