@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
@@ -8,10 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: []
 })
 export class AppHeaderComponent {
+  @Output() toggleSidebarForme: EventEmitter<any> = new EventEmitter()
   role: any;
   constructor(private router: Router,
     private dialog: MatDialog) {
 
   }
 
+  toggleSidebar(){
+    this.toggleSidebarForme.emit()
+  }
 }

@@ -29,4 +29,8 @@ export class UserService {
   checkToken():Observable<any>{
     return this.htppClient.get(this.url+"/user/checkToken/")
   }
+
+  changePassword(data:any):Observable<any>{
+    return this.htppClient.post(this.url+"/user/changePassword/",data)
+  }
 }
